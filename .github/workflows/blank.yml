@@ -14,8 +14,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello testing print
-        run: echo Hello from Mihir
+      - name: Hello testing print 1
+        run: echo Hello from Mihir , This is the first file I am creating for testing Github Actions
 
       - name: Run a multi-line script
         run: |
