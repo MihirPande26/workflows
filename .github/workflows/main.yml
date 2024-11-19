@@ -3,8 +3,7 @@ on:
   push:
 jobs:
   docker:
-    runs-on: 
-        labels: kucl2
+    runs-on: kucl2
     steps:
       -
         name: Set up QEMU test
