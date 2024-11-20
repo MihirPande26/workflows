@@ -4,7 +4,7 @@ on:
 jobs:
   docker_1:
     runs-on: ubuntu-latest 
-      #labels: kucl22 
+      #labels: kucl2 
          
     steps:
       -
@@ -29,7 +29,7 @@ jobs:
     needs: docker_1
     name: deploy image
     runs-on: 
-      labels: kucl22
+      labels: kucl2
     steps:
       - name: connect and pull
         run: ssh ${{ secrets.S_USER }}@${{ secrets.D_HOST }} "docker run -d ${{ secrets.DOCKER_USERNAME}}/kucl2:actions"
