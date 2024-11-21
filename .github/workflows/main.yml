@@ -33,5 +33,5 @@ jobs:
     steps:
       - name: create deployment
         run: mkdir ${HOME}/.kube
-             echo ${{KUBECONFIG}} | base64  --decode > ${HOME}/.kube/config
+             echo "${{secrets.KUBECONFIG}}" | base64  --decode > ${HOME}/.kube/config
              kubectl create deployment githubaction --image=docker.io/httpd
