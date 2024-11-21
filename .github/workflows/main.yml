@@ -32,6 +32,7 @@ jobs:
       labels: kucl22
     steps:
       - name: create deployment
-        run: mkdir ${HOME}/.kube -p
-             echo "${{secrets.KUBECONFIG}}" | base64  --decode > ${HOME}/.kube/config
-             kubectl create deployment githubaction --image=docker.io/httpd
+        run: |
+         mkdir ${HOME}/.kube -p
+         echo "${{secrets.KUBECONFIG}}" | base64  --decode > ${HOME}/.kube/config
+         kubectl create deployment githubaction --image=docker.io/httpd
